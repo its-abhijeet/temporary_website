@@ -1,18 +1,18 @@
-import React from 'react';
-import { ParallaxSection } from '../components/ParallaxSection';
-import { ChevronDown } from 'lucide-react';
+import React from "react";
+import { ParallaxSection } from "../components/ParallaxSection";
+import { ChevronDown } from "lucide-react";
 
 const Home: React.FC = () => {
   const handleScroll = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const aboutSection = document.querySelector('#about');
+    const aboutSection = document.querySelector("#about");
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      aboutSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <ParallaxSection 
+    <ParallaxSection
       id="home"
       backgroundImage="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
       overlay
@@ -21,9 +21,9 @@ const Home: React.FC = () => {
     >
       <div className="max-w-4xl mx-auto">
         <div className="mb-8 flex justify-center">
-          <img 
-            src="src\sections\bgimage.jpeg" 
-            alt="CODEINCUBATE Logo" 
+          <img
+            src="https://iili.io/3toQi3Q.jpg"
+            alt="CODEINCUBATE Logo"
             className="h-24 md:h-32"
           />
         </div>
@@ -34,28 +34,32 @@ const Home: React.FC = () => {
           Awesome Codes, Great Tech!
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in animation-delay-500">
-          <a 
-            href="#services" 
+          <a
+            href="#services"
             onClick={(e) => {
               e.preventDefault();
-              document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' });
+              document
+                .querySelector("#services")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
             className="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-md transition-all duration-300 font-medium"
           >
             Our Services
           </a>
-          <a 
-            href="#contact" 
+          <a
+            href="#contact"
             onClick={(e) => {
               e.preventDefault();
-              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+              document
+                .querySelector("#contact")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
             className="px-8 py-3 bg-transparent border-2 border-white hover:bg-white/20 text-white rounded-md transition-all duration-300 font-medium"
           >
             Contact Us
           </a>
         </div>
-        <button 
+        <button
           onClick={handleScroll}
           aria-label="Scroll down"
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
@@ -67,4 +71,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home
+export default Home;
